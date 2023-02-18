@@ -49,12 +49,13 @@
   }
 
   .top_info{
-    padding-left: calc(50% - 1600px / 2);
-    padding-right: calc(50% - 1600px / 2);
+    padding-left: calc(50% - 800px);
+    padding-right: calc(50% - 800px);
     background: #F1E4E6;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .branding{
@@ -76,7 +77,7 @@
     .brand_text{
         font-style: normal;
         font-weight: 700;
-        font-size: 32px;
+        font-size: 45px;
         line-height: 58px;
     }
 
@@ -99,18 +100,22 @@
 
     .woman{
       background-image: url(img/item_for_woman.svg);
+      background-size: 100%;
     }
 
     .man{
       background-image: url(img/item_for_men.svg);
+      background-size: 100%;
     }
 
     .kids{
       background-image: url(img/item_for_kids.svg);
+      background-size: 100%;
     }
 
     .accesoires{
       background-image: url(img/item_big_accesories.svg);
+      background-size: 100%;
     }
 
     .sale_item_title {
@@ -162,9 +167,19 @@
         line-height: 17px;
         color: #9F9F9F;
       }
+
+      .products_items{
+        padding-top: 48px;
+        background: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
       
       .product_item{
         background: #F8F8F8;
+        display: flex;
+        flex-direction: column;
       
       
 
@@ -218,6 +233,87 @@
         width: 212px;
         height: 48px;
       }
+
+      @media(max-width: 1024px){
+      .page{
+          padding-left: calc(50% - 366px);
+          padding-right: calc(50% - 366px);
+        }
+
+        .header{
+          padding-bottom: 18px;
+        }
+        
+        .header_menu{
+           gap: 25px;
+        }
+
+      .top_info{
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);      
+      }
+
+     .brand_name{
+        font-size: 44px;
+        line-height: 53px;
+      }
+
+      .brand_text{
+        font-size: 24px;
+        line-height: 25px;
+      }
+
+      .sale_content{
+        padding-bottom: 110px;        
+        gap: 20px;
+      }
+
+      .sale_item_content{
+        height: 168px;
+      }
+
+      .sale_item_big {
+        min-height: 116px;
+
+      }
+
+      .products_items{
+        padding-top: 73px;
+        background: white;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .product_item_content{
+        padding-left: 16px;
+      }
+
+      .products_footer{
+        margin-top: 33px;
+        padding-bottom: 71px;
+      }
+
+
+
+
+      }
+        
+
+      
+
+      
+
+      
+
+
+     
+      
+
+      
+
+      
 
 
 
