@@ -240,12 +240,10 @@
   }
   
   .browse_all_button:hover{
-    background: #F16D7F;    
-  }
-
-  .browse_all_button:hover .button_text{
+    background: #F16D7F; 
     color: #F8F8F8;
   }
+
 
   .footer_wrapper{
     background-color: rgba(34, 34, 36, 1);
