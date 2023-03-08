@@ -121,6 +121,11 @@ body {
         color: #6F6E6E;
         padding-left: 21px;
 
+        &__link:hover {
+            color: $colorSelectiveSite
+        }
+
+
     }
 
 }
