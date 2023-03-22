@@ -455,6 +455,11 @@ summary::-webkit-details-marker {
         z-index: 3;
         background-color: #E1E1E1;
         border: none;
+
+    }
+
+    &__input::placeholder {
+        text-align: left;
     }
 
     &__btn {
@@ -797,7 +802,7 @@ summary::-webkit-details-marker {
 
     }
 
-    &__item::not(:last-child)::after {
+    &__item:not(:last-child)::after {
         content: '/';
         padding-left: 8px;
         padding-right: 8px;
@@ -1491,7 +1496,71 @@ input::-webkit-input-placeholder {
         background-color: #E05C6E;
     }
 
+}
 
+// registration page
+
+.user__info {
+
+    padding-top: 64px;
+
+    &__title {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        color: $textColor;
+        margin-bottom: 21px;
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+
+        &__input {
+            width: 358px;
+            height: 44px;
+            border: 1px solid #A4A4A4;
+            padding: 0px 16px;
+        }
+
+        &__input::placeholder {
+            text-align: left;
+            color: #B1B1B1;
+        }
+    }
+
+
+
+
+}
+
+.user__info__gender {
+
+    input[type=checkbox],
+    input[type=radio] {
+        display: none;
+    }
+
+    input[type=radio]+label span {
+        border: 1px solid #A4A4A4;
+        border-radius: 50%;
+        font-size: 40pt;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        line-height: 0.35em;
+        margin: 4px 8px 8px 8px;
+        padding: 2px;
+        text-align: center;
+        vertical-align: middle;
+
+    }
+
+    input[type=radio]:checked+label span {
+        background: #4A4A4A;
+    }
 
 
 }

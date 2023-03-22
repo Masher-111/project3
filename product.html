@@ -16,8 +16,8 @@
 <body>
     <div class="box-content">
         <header class="header center">
-            <div class="header__left"><a href="index.html" class="logo"><img src="img/header_logo.svg" alt=""></a><a
-                    href="#" class="search"><img src="img/header_search.svg" alt=""></a></div>
+            <div class="header__left"><a href="index.html" class="logo"><img src="img/header_logo.svg" alt="logo"></a><a
+                    href="#" class="search"><img src="img/header_search.svg" alt="search icon"></a></div>
             <div class="header__right">
                 <div class="burger-menu-icon"><label for="burger"><img src="img/logo-burger-menu.svg"
                             alt="burger"></label><input id="burger" type="checkbox">
@@ -25,7 +25,7 @@
                         <h3 class="burger__nav__heading">MENU</h3>
                         <div class="burger__nav__box">
                             <div class="burger__nav__item">
-                                <a href="#" class="burger__nav__title">MAN</a>
+                                <a href="catalog.html" class="burger__nav__title">MAN</a>
                             </div>
                             <ul class="burger__nav__links-list">
                                 <li><a class="burger__nav__link" href="#">Accesoires</a></li>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="burger__nav__box">
                             <div class="burger__nav__item">
-                                <a href="#" class="burger__nav__title">WOMAN</a>
+                                <a href="catalog.html" class="burger__nav__title">WOMAN</a>
                             </div>
                             <ul class="burger__nav__links-list">
                                 <li><a class="burger__nav__link" href="#">Accesoires</a></li>
@@ -48,7 +48,7 @@
                         </div>
                         <div class="burger__nav__box">
                             <div class="burger__nav__item">
-                                <a href="#" class="burger__nav__title">KIDS</a>
+                                <a href="catalog.html" class="burger__nav__title">KIDS</a>
                             </div>
                             <ul class="burger__nav__links-list">
                                 <li><a class="burger__nav__link" href="#">Accesoires</a></li>
@@ -62,17 +62,19 @@
 
                     </nav>
                 </div>
-                <div class="account-icon"><img src="img/logo-account.svg" alt="account"></div>
-                <div class="basket-icon"><img src="img/logo-basket.svg" alt="basket"></div>
+                <a class="account-icon" href="registration.html"><img src="img/logo-account.svg" alt="account"></a>
+                <a class="basket-icon" href="cart.html"><img src="img/logo-basket.svg" alt="basket"></a>
             </div>
         </header>
         <section class="top-head center">
             <h2 class="top-head__title">NEW ARRIVALS </h2>
             <nav class="breadcrumbs">
                 <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__list__item"><a href="#" class="breadcrumbs__list__link">HOME</a></li>
-                    <li class="breadcrumbs__list__item"><a href="#" class="breadcrumbs__list__link">MEN</a></li>
-                    <li class="breadcrumbs__list__item"><a href="#" class="breadcrumbs__list__link">NEW
+                    <li class="breadcrumbs__list__item"><a href="index.html" class="breadcrumbs__list__link">HOME</a>
+                    </li>
+                    <li class="breadcrumbs__list__item"><a href="catalog.html" class="breadcrumbs__list__link">MEN</a>
+                    </li>
+                    <li class="breadcrumbs__list__item"><a href="catalog.html" class="breadcrumbs__list__link">NEW
                             ARRIVALS</a></li>
                 </ul>
             </nav>
@@ -131,21 +133,21 @@
         </div>
         <div class="product-box center">
             <div class="product"><img class="product__img" src="img/product-1.jpg" alt="product">
-                <div class="product__content"><a href="#" class="product__link">ELLERY X M'O CAPSULE</a>
+                <div class="product__content"><a href="product.html" class="product__link">ELLERY X M'O CAPSULE</a>
                     <p class="product__text">Known for her sculptural takes on traditional tailoring,
                         Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                     <p class="product__price">$52.00</p>
                 </div>
             </div>
             <div class="product"><img class="product__img" src="img/product-2.jpg" alt="product">
-                <div class="product__content"><a href="#" class="product__link">ELLERY X M'O CAPSULE</a>
+                <div class="product__content"><a href="product.html" class="product__link">ELLERY X M'O CAPSULE</a>
                     <p class="product__text">Known for her sculptural takes on traditional tailoring,
                         Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                     <p class="product__price">$52.00</p>
                 </div>
             </div>
             <div class="product"><img class="product__img" src="img/product-3.jpg" alt="product">
-                <div class="product__content"><a href="#" class="product__link">ELLERY X M'O CAPSULE</a>
+                <div class="product__content"><a href="product.html" class="product__link">ELLERY X M'O CAPSULE</a>
                     <p class="product__text">Known for her sculptural takes on traditional tailoring,
                         Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
                     <p class="product__price">$52.00</p>
@@ -164,9 +166,9 @@
                     <h1 class="subscribe__info__title">SUBSCRIBE</h1>
                     <h1 class="subscribe__info__text">FOR OUR NEWLETTER AND PROMOTION</h1>
                     <div class="subscribe__text-field">
-                        <div class="subscribe__text-field__group"><input class="subscribe__text-field__input"
+                        <form class="subscribe__text-field__group"><input class="subscribe__text-field__input"
                                 type="email" required placeholder="Enter Your Mail"><button
-                                class="subscribe__text-field__btn" type="button">Subscribe</button></div>
+                                class="subscribe__text-field__btn" type="button">Subscribe</button></form>
                     </div>
                 </div>
             </div>

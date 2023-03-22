@@ -399,6 +399,12 @@ summary::-webkit-details-marker {
   background-color: #E1E1E1;
   border: none;
 }
+.subscribe__text-field__input::-moz-placeholder {
+  text-align: left;
+}
+.subscribe__text-field__input::placeholder {
+  text-align: left;
+}
 .subscribe__text-field__btn {
   height: 50px;
   width: 100px;
@@ -665,7 +671,7 @@ summary::-webkit-details-marker {
 .breadcrumbs__list__item {
   white-space: nowrap;
 }
-.breadcrumbs__list__item::not(:last-child)::after {
+.breadcrumbs__list__item:not(:last-child)::after {
   content: "/";
   padding-left: 8px;
   padding-right: 8px;
@@ -1232,4 +1238,56 @@ input::-webkit-input-placeholder {
 }
 .final__score__button:hover {
   background-color: #E05C6E;
+}
+
+.user__info {
+  padding-top: 64px;
+}
+.user__info__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #000;
+  margin-bottom: 21px;
+}
+.user__info__name {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.user__info__name__input {
+  width: 358px;
+  height: 44px;
+  border: 1px solid #A4A4A4;
+  padding: 0px 16px;
+}
+.user__info__name__input::-moz-placeholder {
+  text-align: left;
+  color: #B1B1B1;
+}
+.user__info__name__input::placeholder {
+  text-align: left;
+  color: #B1B1B1;
+}
+
+.user__info__gender input[type=checkbox],
+.user__info__gender input[type=radio] {
+  display: none;
+}
+.user__info__gender input[type=radio] + label span {
+  border: 1px solid #A4A4A4;
+  border-radius: 50%;
+  font-size: 40pt;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  line-height: 0.35em;
+  margin: 4px 8px 8px 8px;
+  padding: 2px;
+  text-align: center;
+  vertical-align: middle;
+}
+.user__info__gender input[type=radio]:checked + label span {
+  background: #4A4A4A;
 }/*# sourceMappingURL=style.css.map */
