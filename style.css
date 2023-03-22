@@ -395,7 +395,6 @@ summary::-webkit-details-marker {
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
   position: relative;
-  z-index: 3;
   background-color: #E1E1E1;
   border: none;
 }
@@ -1240,10 +1239,16 @@ input::-webkit-input-placeholder {
   background-color: #E05C6E;
 }
 
-.user__info {
+.registration__content {
   padding-top: 64px;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 128px;
 }
-.user__info__title {
+
+.registration__form__item__title {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -1251,43 +1256,123 @@ input::-webkit-input-placeholder {
   color: #000;
   margin-bottom: 21px;
 }
-.user__info__name {
+.registration__form__item__fields {
   display: flex;
   flex-direction: column;
   gap: 21px;
 }
-.user__info__name__input {
+.registration__form__item__input {
   width: 358px;
   height: 44px;
   border: 1px solid #A4A4A4;
   padding: 0px 16px;
 }
-.user__info__name__input::-moz-placeholder {
+.registration__form__item__input::-moz-placeholder {
   text-align: left;
   color: #B1B1B1;
 }
-.user__info__name__input::placeholder {
+.registration__form__item__input::placeholder {
   text-align: left;
   color: #B1B1B1;
 }
-
-.user__info__gender input[type=checkbox],
-.user__info__gender input[type=radio] {
+.registration__form__item__gender {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.registration__form__item__gender input[type=checkbox],
+.registration__form__item__gender input[type=radio] {
   display: none;
 }
-.user__info__gender input[type=radio] + label span {
+.registration__form__item__gender input[type=radio] + label span {
   border: 1px solid #A4A4A4;
   border-radius: 50%;
-  font-size: 40pt;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
   display: inline-block;
   width: 17px;
   height: 17px;
-  line-height: 0.35em;
   margin: 4px 8px 8px 8px;
   padding: 2px;
   text-align: center;
   vertical-align: middle;
 }
-.user__info__gender input[type=radio]:checked + label span {
+.registration__form__item__gender label {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000;
+}
+.registration__form__item__gender input[type=radio]:checked + label span {
   background: #4A4A4A;
+}
+.registration__form__item__description {
+  margin-top: 16px;
+  margin-bottom: 39px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  width: 358px;
+}
+
+.registration__form__button {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 167px;
+  height: 50px;
+  background-color: #F16D7F;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.registration__form__button:hover {
+  background-color: #E05C6E;
+}
+
+.loyalty__perks__info {
+  width: 625px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+}
+.loyalty__perks__info__title {
+  margin-bottom: 21px;
+}
+.loyalty__perks__info__offers {
+  padding-top: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.loyalty__perks__info__offer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 23px;
+  transition: 0.2s;
+}
+.loyalty__perks__info__offer:hover {
+  transform: scale(1.1);
+  color: #F16D7F;
+}
+.loyalty__perks__info__offer:hover path {
+  fill: #F16D7F;
 }/*# sourceMappingURL=style.css.map */
