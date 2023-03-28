@@ -1001,7 +1001,7 @@ summary::-webkit-details-marker {
     }
 }
 
-//cart page
+///cart page
 
 .cart__content {
     margin-top: 96px;
@@ -1147,7 +1147,11 @@ input::-webkit-input-placeholder {
 }
 
 
-.cart__content__right {}
+.cart__content__right {
+    display: flex;
+    flex-direction: column;
+    gap: 57px;
+}
 
 .address__info {
     display: flex;
@@ -1198,7 +1202,6 @@ input::-webkit-input-placeholder {
 }
 
 .final__score {
-    margin-top: 57px;
     width: $thirdSiteWidth;
     height: 214px;
     background: #F5F3F3;
@@ -1567,6 +1570,52 @@ input::-webkit-input-placeholder {
         margin-bottom: 64px;
 
     }
+
+    //cart page
+
+    .cart__content {
+        margin-top: 59px;
+        flex-direction: column;
+        gap: 64px;
+    }
+
+    .cart__content__left__buttons {
+        margin-top: 62px;
+        gap: 48px;
+        justify-content: center;
+    }
+
+    .product__add {
+        align-items: center;
+    }
+
+    .cart__content__right {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .final__score {
+        margin-top: 38px;
+    }
+
+    //registration page
+
+    .registration__content {
+        padding-top: 64px;
+        gap: 22px;
+    }
+
+    .loyalty__perks__info {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .loyalty__perks__info__title {
+        margin-bottom: 32px;
+    }
+
+
+
 
 
 
