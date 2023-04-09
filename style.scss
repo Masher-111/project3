@@ -8,7 +8,7 @@
 }
 
 img {
-    max-width: 100%;
+    width: auto;
 }
 
 a {
@@ -37,6 +37,7 @@ summary::-webkit-details-marker {
     padding-right: calc(50% - $widthSite / 2);
 }
 
+//header
 .header {
     background-color: $backBlockColor;
     padding-top: 20px;
@@ -79,7 +80,7 @@ summary::-webkit-details-marker {
     width: $widthBurgerMenu;
     padding: 32px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     top: 80px;
     right: 0;
@@ -434,6 +435,7 @@ summary::-webkit-details-marker {
     }
 
     &__input {
+        box-sizing: border-box;
         width: 256px;
         font-weight: 400;
         font-size: 14px;
@@ -748,7 +750,7 @@ summary::-webkit-details-marker {
 
 }
 
-.product-box {
+.product__box-content {
     @include centerFlex();
     gap: $gapGrid;
 }
@@ -825,10 +827,53 @@ summary::-webkit-details-marker {
     }
 }
 
-//product page
+.advantages {
+    background-color: $backBlockColor;
+    padding-top: 104px;
+    padding-bottom: 104px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $gapGrid;
+
+    &__item {
+        width: $thirdSiteWidth;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        justify-content: space-between;
+    }
+
+    &__heading {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FBFBFB;
+        ;
+    }
+
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #FBFBFB;
+    }
+
+}
+
+
+
+//product page 
+
+
+
 .slider {
-    padding-top: 11px;
-    padding-bottom: 42px;
+    height: 777px;
     background: #F7F7F7;
     border: 1px solid #EAEAEA;
     display: flex;
@@ -873,7 +918,15 @@ summary::-webkit-details-marker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 128px;
+    margin-bottom: 128px;
+
+}
+
+.product-box {
+    margin-bottom: 128px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 
 .product__card {
@@ -890,63 +943,65 @@ summary::-webkit-details-marker {
 }
 
 .product__card__description {
-
-    width: 641px;
+    box-sizing: border-box;
+    width: 375px;
+    padding-left: 24px;
+    padding-right: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid #EAEAEA;
-    ;
+}
 
-    &-category {
-        box-sizing: border-box;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: $colorSelectiveSite;
+&-category {
+    box-sizing: border-box;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: $colorSelectiveSite;
 
-    }
+}
 
-    &-border {
-        box-sizing: border-box;
-        width: 63px;
-        height: 3px;
-        background-color: $colorSelectiveSite;
-        margin-top: 12px;
-        margin-bottom: 12px;
+&-border {
+    box-sizing: border-box;
+    width: 63px;
+    height: 3px;
+    background-color: $colorSelectiveSite;
+    margin-top: 12px;
+    margin-bottom: 12px;
 
-    }
+}
 
-    &-brand {
+&-brand {
 
-        font-style: normal;
-        font-weight: 300;
-        font-size: 18px;
-        line-height: 22px;
-        color: #4D4D4D;
-        margin-bottom: 48px;
-    }
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    color: #4D4D4D;
+    margin-bottom: 48px;
+}
 
-    &-info {
-        width: 555px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        color: #5E5E5E;
-        margin-bottom: 32px;
-    }
+&-info {
 
-    &-price {
-        padding-bottom: 65px;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 29px;
-        color: $colorSelectiveSite;
-    }
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #5E5E5E;
+    margin-bottom: 32px;
+}
+
+&-price {
+    padding-bottom: 65px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: $colorSelectiveSite;
+}
 
 }
 
@@ -954,6 +1009,15 @@ summary::-webkit-details-marker {
     margin-top: 48.5px;
     margin-bottom: 60.5px;
 }
+
+.cart__button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    padding-left: 24px;
+}
+
 
 .product {
     width: $thirdSiteWidth;
@@ -1047,6 +1111,7 @@ summary::-webkit-details-marker {
 
         &__title {
             margin-bottom: 42px;
+            width: 220px;
         }
 
         &__link {
@@ -1127,6 +1192,7 @@ input::-webkit-input-placeholder {
         font-weight: 300;
         font-size: 14px;
         line-height: 17px;
+        text-transform: uppercase;
         color: $textColor;
         width: 234px;
         height: 49px;
@@ -1170,8 +1236,6 @@ input::-webkit-input-placeholder {
         height: 45px;
         border: 1px solid #A4A4A4;
         color: $textColor;
-
-
     }
 
     &__input::placeholder {
@@ -1181,8 +1245,9 @@ input::-webkit-input-placeholder {
     &__button {
         font-style: normal;
         font-weight: 300;
-        font-size: 11px;
-        line-height: 13px;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
         color: #4A4A4A;
         width: 101px;
         height: 35px;
@@ -1321,6 +1386,7 @@ input::-webkit-input-placeholder {
         }
 
         &__input {
+            box-sizing: border-box;
             width: 358px;
             height: 44px;
             border: 1px solid #A4A4A4;
@@ -1468,8 +1534,6 @@ input::-webkit-input-placeholder {
 
     //index.html
 
-    .top__info {}
-
     .brand__name {
         font-size: 44px;
         line-height: 53px;
@@ -1553,11 +1617,18 @@ input::-webkit-input-placeholder {
         gap: 16px;
     }
 
+    .advantages {
+        padding-top: 48px;
+        padding-bottom: 64px;
+        gap: 48px;
+    }
+
     //catalog page
 
     .filter-sort {
         padding-top: 24px;
         height: 112px;
+        justify-content: space-between;
     }
 
     .none {
@@ -1587,6 +1658,10 @@ input::-webkit-input-placeholder {
 
     .product__add {
         align-items: center;
+
+        &__item {
+            width: 734px;
+        }
     }
 
     .cart__content__right {
@@ -1708,17 +1783,6 @@ input::-webkit-input-placeholder {
         }
     }
 
-    //product page
-    .top-head {
-        flex-direction: column;
-        gap: 32px;
-        padding-top: 24px;
-        padding-bottom: 46px;
-    }
-
-
-
-
     //footer
     .subscribe {
         min-height: 550px;
@@ -1740,14 +1804,187 @@ input::-webkit-input-placeholder {
 
     }
 
-
     .contacts {
+        box-sizing: border-box;
         height: 143px;
         padding-top: 43px;
         padding-bottom: 10px;
         flex-direction: column-reverse;
-        gap: 40px;
+        gap: 25px;
 
     }
+
+    //catalog page
+
+    .filter {
+
+        width: auto;
+
+        &__title {
+            left: -999999px;
+            visibility: hidden;
+            position: absolute;
+        }
+
+        &__summary {
+
+            svg {
+                width: 38px;
+                height: 25px;
+            }
+        }
+    }
+
+
+
+    .sort {
+        gap: 18px;
+
+        &__title {
+            font-size: 12px;
+            line-height: 14px;
+
+        }
+    }
+
+    //product page
+    .top-head {
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 24px;
+        padding-bottom: 46px;
+    }
+
+    .product__card-box {
+        margin-bottom: 64px;
+    }
+
+    .product-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sort__title {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    //cart page
+
+    .cart__content {
+        gap: 48px;
+        margin-top: 39px;
+        margin-bottom: 96px;
+    }
+
+    .product__add__item {
+        width: 358px;
+
+        &__close {
+            top: 16px;
+            right: 12px;
+
+            svg {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+
+        img {
+            width: 144px;
+        }
+
+        &__info {
+            padding: 13px 13px 38px 17px;
+
+            &__title {
+                margin-bottom: 26px;
+                width: 144px;
+            }
+
+            &__link {
+                font-size: 16px;
+                line-height: 19px;
+            }
+
+            &__filter {
+                gap: 4px;
+
+                &__category {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                &__condition-price {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                &__condition {
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                &__quanity {
+                    gap: 16px;
+
+                    &__input {
+                        width: 24px;
+                        height: 15px;
+                        border: 1px solid #EAEAEA;
+                    }
+
+                }
+            }
+        }
+
+
+    }
+
+    .cart__content__left__buttons {
+        margin-top: 30px;
+        gap: 10px;
+
+        &__button {
+            font-size: 12px;
+            line-height: 14px;
+            width: 175px;
+            height: 33px;
+            text-transform: none;
+        }
+    }
+
+    .cart__content__right {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .address__info {
+
+
+        &__button {
+            text-transform: none;
+        }
+    }
+
+    .final__score {
+        margin-top: 0;
+
+    }
+
+
+    //registration page
+
+    .top-head {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .registration__content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
 
 }
